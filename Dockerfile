@@ -14,3 +14,5 @@ RUN git clone --depth 10 https://mariach@bitbucket.org/mariach/mega2.git mega &&
     make tea &&\
     cp tea /usr/local/bin &&\
     rm -rf /mega/Homfam
+
+RUN cp mega/clustal-omega-1.2.0/bin/bin/clustalo /usr/local/bin/
