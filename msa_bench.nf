@@ -22,8 +22,7 @@ process align{
   
   
   """ 
-     tea -i $seq_file -o ${name}.fa -d --cluster_size 2 --cluster_number 5000
-      
+     tea -i $seq_file -o ${name}.fa -d --cluster_size 2 --cluster_number 5000 > /dev/null
   """
 
 }
