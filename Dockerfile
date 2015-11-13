@@ -12,4 +12,5 @@ RUN git clone --depth 10 https://mariach@bitbucket.org/mariach/mega2.git mega &&
     rm -r * &&\
     cmake .. &&\
     make tea &&\
-    cp tea /usr/local/bin
+    cp tea /usr/local/bin &&\
+    rm -rf /mega/Homfam
