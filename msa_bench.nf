@@ -1,5 +1,4 @@
-
-
+#!/usr/bin/env nextflow
 
 params.base_dir="/users/cn/mhatzou/Datasets/HomFam/seqs_noBZXU_noDuplicates/"
 params.out_dir="MEGA_NF"
