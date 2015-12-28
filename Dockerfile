@@ -1,7 +1,7 @@
 FROM pditommaso/dkrbase
 MAINTAINER Maria Chatzou <mxatzou@gmail.com>
 
-RUN apt-get update --fix-missing && apt-get install -y \
+RUN apt-get update -y --fix-missing && apt-get install -y \
     libboost-all-dev \
     git \
     cmake \
@@ -13,6 +13,10 @@ RUN git clone --depth 10 https://mariach@bitbucket.org/mariach/mega2.git mega &&
     cmake .. &&\
     make tea &&\
     cp tea /usr/local/bin &&\
-    rm -rf /mega/Homfam
+    rm -rf /mega/Homfam &&\
+    cd ..
 
-RUN cp mega/clustal-omega-1.2.0/bin/bin/clustalo /usr/local/bin/
+RUN cd clustal &&\
+    ./configure &&\
+    make &&\
+    cp mega/clustal/src/clustalo /usr/local/bin/
