@@ -67,7 +67,6 @@ process aln {
 
 process score {
     tag "${params.score} + $method + $dataset_name"
-    container "${params.score}"
     publishDir "MSAs/$params.bucket/$id"
     
     input: 
